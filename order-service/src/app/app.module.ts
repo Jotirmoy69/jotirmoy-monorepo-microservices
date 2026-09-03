@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import {ClientsModule, Transport} from '@nestjs/microservices';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -11,12 +11,22 @@ import {ClientsModule, Transport} from '@nestjs/microservices';
         transport: Transport.TCP,
         options: {
           host: 'localhost',
-          port: 5005,
+          port: 5005
+        },
+      },
+    ]),
+    ClientsModule.register([
+      {
+        name: 'INVENTORY_PACKAGE',
+        transport: Transport.GRPC,
+        options: {
+          url: 'localhost:5006',
+          package: 'inventory',
+          protoPath: join(__dirname, '..', '..', 'libs', 'proto', 'inventory.proto'),
         },
       },
     ]),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController], 
 })
 export class AppModule {}
