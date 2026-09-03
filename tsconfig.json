@@ -17,6 +17,12 @@
     },
     {
       "path": "./shared"
+    },
+    {
+      "path": "./inventory-service-e2e"
+    },
+    {
+      "path": "./inventory-service"
     }
   ],
   "compilerOptions": {}
