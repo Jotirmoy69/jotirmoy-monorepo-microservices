@@ -32,7 +32,11 @@
     "order-service-e2e",
     "shared",
     "inventory-service",
-    "inventory-service-e2e"
+    "inventory-service-e2e",
+    "payment-service",
+    "payment-service-e2e",
+    "checkout-service",
+    "checkout-service-e2e"
   ],
   "dependencies": {
     "@grpc/grpc-js": "^1.14.4",
@@ -41,6 +45,7 @@
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
     "axios": "^1.6.0",
+    "consul": "^2.0.1",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.0"
   }

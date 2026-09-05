@@ -23,6 +23,18 @@
     },
     {
       "path": "./inventory-service"
+    },
+    {
+      "path": "./payment-service-e2e"
+    },
+    {
+      "path": "./payment-service"
+    },
+    {
+      "path": "./checkout-service-e2e"
+    },
+    {
+      "path": "./checkout-service"
     }
   ],
   "compilerOptions": {}
